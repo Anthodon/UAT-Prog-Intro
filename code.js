@@ -88,6 +88,9 @@ function resolvegrit(modifier){
     //sets conclusion display for user
     let roundup = checkroundup();
 
+    //prints result to console
+    console.log("checkroundup: " + checkroundup())
+
     //html fetches result
     document.getElementById("destiny").innerHTML = 
     //global variables displayed next to their targets ie 2/5

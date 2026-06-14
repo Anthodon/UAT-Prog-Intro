@@ -5,22 +5,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2.2 Index</title>
+    <title>4.1 Index</title>
+    <!--separate js to prevent clutter in code.js-->
+    <script src=cooking.js></script>
     <!--linked to css-->
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-     <header>
-        <h1>2.2 Index</h1>
+    <!--lets me format page layout-->
+    <div class="page">
+        
         <!--nav section added to hyperlink pages-->
-         <nav>
-            <a href="index.html">Home</a>
-            <br>
+        <nav>
             <a href="boards.html">Boards</a>
-         </nav>
-     </header>
-    
-     <p><img id="catrice" src="Cat Fried Rice.png"></p>
+            <br>
+            <a href="game.html">Law Man</a>
+        </nav>
+         
+        <!--div class assigns buttons to left column -->
+        <div class="buttonleft">
+            <h1>Chef Cat Options:</h1>
+            <!--start button-->
+            <button id="cooky" onclick="cookstart();">LET HIM COOK</button>
+            <br><br>
+            <!--stop button-->
+            <button id="cookn" onclick="cookstop();" disabled>Can't Handle the Heat</button>
+        </div>     
+
+        <!--center column div class-->
+        <div class="gameshell">
+            <header>
+                <h1>WELCOME TO CHEF CAT'S KITCHEN!</h1>
+            </header>
+     
+            <p>
+            <img id="catrice" src="Cat Fried Rice.png">
+            </p>
+        </div>
+    </div>     
 </body>
 </html>

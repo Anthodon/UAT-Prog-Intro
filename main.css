@@ -1,32 +1,64 @@
 body{
-    /* webpage background */
+/* webpage background */
 background-color:tan;
 /* text color */
 color: black;
+/*removed margin to prevent unnecessary scroll*/
+margin: 0;
+}
+
+/*formated page layout to prevent hyperlinks from off centering content*/
+.page{
+    /*primes display for division*/
+    display: grid;
+    /*creates three columns for content*/
+    grid-template-columns: 200px 1fr 200px;   
+}
+
+/*catchall for center screen content, named for origination in game.html*/
+.gameshell{
+    /* column 2 is central column, main content*/
+    grid-column: 2;
+    /*demands header space*/
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /*keeps column 2 content sized correctly*/
+    width: 100%;
+}
+
+/*used to keep buttons in the left column*/
+.buttonleft{
+    grid-column: 1;
+    width: 200px;
+    height: auto;
+    padding: 10px;
 }
 
 header{
     text-align: center;
 }
 
+/*used to keep hyperlinks in the left column*/
 nav{
+    grid-column: 1;
     /* orientation of hyperlinks */
-height: 600px;
+height: auto;
 width: 200px;
-float: left;
-padding: 5px;
+padding: 10px;
 line-height: 30px;
+font-size: large;
 }
 
 footer{
 
     text-align: center;
-    margin-right: 200px;
 }
 
 /* resized as requested */
 #catrice{
-    margin-right: 200px;
     width: 800px;
     height: 800px;
 }
@@ -37,11 +69,8 @@ width: 200px;
 height: 170px;
 }
 
-h1{
-    text-align: center;
-}
-
-div{
+/*designated interface for game, assigned to center column*/
+#destiny{
     text-align: center; 
     /*channeling the oregon trail*/
     height: 135px;
@@ -52,12 +81,12 @@ div{
     border: 2px solid #333;
     font-family: monospace;
     font-size: large;
-    margin:auto;
+    margin:10px 0;
 }
 
 #cowboy{
     /*very useful scaling tool since the original image was massive*/
-    width: 54vw;
+    width: 53vw;
     height: auto;
     border: 2px solid #333;
 }
