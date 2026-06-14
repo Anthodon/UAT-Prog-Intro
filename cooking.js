@@ -50,7 +50,7 @@ function cookstop(){
     position = 0;
     catflip = 0;
     catrotate = 0;
-    wigglestep = 0;
+    wigglestep = "right";
     wigglecount = 0;
     movecount = 0;
     movecat();
