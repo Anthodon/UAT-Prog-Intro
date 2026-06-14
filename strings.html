@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Anthony S. Donato-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--style sheet-->
+    <link rel = "stylesheet" href = "strings.css">
+    <title>strings</title>
+</head>
+<!--js invocation-->
+<script src="strings.js"></script>
+<body>
+    <!--functional header-->
+    <h1> Enter Personally Identifiable Information!</h1>
+
+    <!--lets me adjust page formatting-->
+    <div class="container">
+
+    <!--data input-->
+    <form id = "pii" onsubmit = "return validatepii()">
+        First Name: <input type = "text" id = "fName" required/>
+        Last Name: <input type = "text" id = "lName" required/>
+        Age: <input type = "number" id = "age" required min="0" max="120"/>
+        SSN: <input type = "text" id = "ssn" required/>
+        Zip Code: <input type = "text" id = "zip" required/>
+        <br>
+        <button type = "submit" id = "submitBTN">Submit!</button>
+    </form>
+    
+    <!--funny creative element-->
+    <img src="Greed.png">
+    </div>
+
+    <!--pass/fail from js-->
+    <br><div id = "output"> Checking... </div>
+    <br><br><br><br>
+    
+</body>
+
+</html>

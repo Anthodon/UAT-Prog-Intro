@@ -1,0 +1,62 @@
+h1
+{
+    font-size: 70px;
+    text-align: center;
+    color: black;
+
+}
+
+body
+{
+    background-color: rgb(240, 141, 48);
+    margin: 40px 80px 40px 80px;
+    border: 10px solid rgb(0, 0, 0);
+    padding: 20px 40px 20px 40px;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+img
+{
+    border: 2px solid black;
+    height: 420px;
+    width: 280px;
+}
+
+form
+{
+    font-size: 37px;
+    color: black;
+    font-family: 'Impact', Gadget, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+button
+{
+    border: 5px solid black;
+    padding: 10px 20px;
+    font-size: large;
+    font-style: bold;
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+    background-color: red;
+    color: yellow
+
+}
+
+div
+{
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    font-family: 'Impact', Gadget, sans-serif;
+}
