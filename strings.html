@@ -12,15 +12,16 @@
 <script src="strings.js"></script>
 <body>
     <!--functional header-->
-    <h1> Enter Personally Identifiable Information!</h1>
+    <h1> Definitely NOT a Scam!<br>Enter Personally Identifiable Information!</h1>
 
     <!--lets me adjust page formatting-->
     <div class="container">
 
     <!--data input-->
     <form id = "pii" onsubmit = "return validatepii()">
-        First Name: <input type = "text" id = "fName" required/>
-        Last Name: <input type = "text" id = "lName" required/>
+        <!--resets validity each time new text is added-->
+        First Name: <input type = "text" id = "namef" required oninput="this.setCustomValidity('')"/>
+        Last Name: <input type = "text" id = "namel" required oninput="this.setCustomValidity('')"/>
         Age: <input type = "number" id = "age" required min="0" max="120"/>
         SSN: <input type = "text" id = "ssn" required/>
         Zip Code: <input type = "text" id = "zip" required/>
