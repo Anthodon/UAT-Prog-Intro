@@ -10,7 +10,8 @@ const target = 3;
 
 //this is the button pressed to play the game
 function catchbandit(){
-
+    //added galloping sound for every roll
+    gallop.play();
     //primes for luck modifier
     let luck = checkluck();
 
@@ -48,12 +49,16 @@ function checkluck(){
     //if the sheriff is unlucky, the desert heat will tire his horse more than usual
     //if a 1 is rolled on the luck die, a -1 penalty is applied to the main roll
     if (roll === 1){
+        //whinny
+        neigh.play();
         return {mod: -1, text: "Your horse is getting tired! (-1)"};
     }
 
     //the bandit doesn't know this land well, he might slip up
     //if a 6 is rolled on the luck die, a +1 bonus is applied to the main roll
     if (roll === 6){
+        //pot shot at the bandit, adjusted for being too high quality
+        bang.play();
         return {mod: +1, text: "He took a wrong turn! (+1)"};
     }
 
@@ -104,13 +109,26 @@ function checkroundup(){
         //the bandit had a head start, so you have some catching up to do
         //5 sucesses required to win
         if (successes >= 5){
+            //cheering for success
+             cheer.play();
             return "You got him! Well done Sheriff!";
         }
 
         //3 failures required to lose
         if (failures >= 3){
+            //crickets for failure
+            crickets.play();
             return "The bandit got away!";
         }
 
         return "";
 }
+
+//sound effects, all soundbible
+let neigh = document.getElementById("neigh");
+let gallop = document.getElementById("gallop");
+//quality too high, actually startled me. volume adjusted
+let bang = document.getElementById("bang");
+bang.volume = 0.5;
+let cheer = document.getElementById("cheer");
+let crickets = document.getElementById("crickets");
