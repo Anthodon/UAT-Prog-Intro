@@ -10,6 +10,8 @@ const target = 3;
 
 //this is the button pressed to play the game
 function catchbandit(){
+    //starts backgrounds music
+    west.play();
     //added galloping sound for every roll
     gallop.play();
     //primes for luck modifier
@@ -124,6 +126,8 @@ function checkroundup(){
         return "";
 }
 
+//background music
+let west = document.getElementById("west");
 //sound effects, all soundbible
 let neigh = document.getElementById("neigh");
 let gallop = document.getElementById("gallop");
