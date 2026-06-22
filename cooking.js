@@ -22,6 +22,12 @@ let wigglestep = "right";
 let cookstep = 0;
 //sequence of major functions executed by start button
 let cookshow = [moverlong, wiggler, flipr, movellong, wigglel, flipl, moverlong];
+
+//cooking audio
+let crowd = document.getElementById("crowd");
+let sizzle = document.getElementById("sizzle");
+let cheer = document.getElementById("cheer");
+
 //double spacing used between functions, they started to blur together
 
 
@@ -38,6 +44,8 @@ function cookstart(){
     document.getElementById("cooky").disabled = true;
     document.getElementById("cookn").disabled = false;
 
+    //background music
+    crowd.play();
     //begins major function cycle at designated speed
     movetime = setInterval(cookrun, 200);
 }
@@ -90,22 +98,20 @@ function wiggler(){
     setspeed(400);
     if(wigglestep === "right"){
         //originally only one execution, additionals added to compensate for decreased movement distance
-        mover();
-        mover();
-        mover();
-        mover();
-        mover();
+       for(let w = 0; w < 5; w++){
+            sizzle.play();
+            mover();
+        }
         wigglecount++;
         wigglestep = "left";
     }
 
     //alternates between left and right movement
     else if(wigglestep === "left"){
-        movel();
-        movel();
-        movel();
-        movel();
-        movel();
+        for(let w = 0; w < 5; w++){
+            sizzle.play();
+            movel();
+        }
         wigglecount++;
         wigglestep = "right";
     }
@@ -118,24 +124,23 @@ function wiggler(){
 }
 
 
+//reoeated move(r/l) executions collapsed into for loops
 function wigglel(){
     setspeed(400);
     if(wigglestep === "left"){
-        movel();
-        movel();
-        movel();
-        movel();
-        movel();
+        for(let w = 0; w < 5; w++){
+            sizzle.play();
+            movel();
+        }
         wigglecount++;
         wigglestep = "right";
     }
 
     else if(wigglestep === "right"){
-        mover();
-        mover();
-        mover();
-        mover();
-        mover();
+        for(let w = 0; w < 5; w++){
+            sizzle.play();
+            mover();
+        }
         wigglecount++;
         wigglestep = "left";
     }
@@ -165,6 +170,7 @@ function flipr(){
     else if(catrotate === -30 && catflip === 180){
         catrotate = 0;
         movecat();
+        cheer.play();
     }
 
     //returns to starting position, proceeds to next major function
@@ -190,9 +196,10 @@ function flipl(){
     else if(catrotate === -30 && catflip === 0){
         catrotate = 0;
         movecat();
+        cheer.play();
     }     
 
-    else if(catrotate === 0 && catflip ===0){
+    else if(catrotate === 0 && catflip === 0){
         catflip = 180;
         movecat();
         cookstep++;
