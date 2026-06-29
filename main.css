@@ -7,6 +7,11 @@ color: black;
 margin: 0;
 }
 
+/*card header formatting*/
+h3{
+    font-size: x-large;
+}
+
 /*formated page layout to prevent hyperlinks from off centering content*/
 .page{
     /*primes display for division*/
@@ -49,6 +54,7 @@ margin: 0;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    font-weight: bold;
 }
 
 /*adjusting images within cards to conform to card size*/
